@@ -58,6 +58,10 @@ namespace ariel
         {
             throw runtime_error("Mat size is always positive");
         }
+        else if (symbol1 < 33  || symbol2 < 33)
+        {
+            throw runtime_error("wrong symbol values");
+        }
         else if (symbol1 == symbol2)
         {
             throw runtime_error("Entered wrong values: symbol1 and symbol2 need be a different symbols");
