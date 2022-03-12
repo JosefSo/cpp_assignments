@@ -66,4 +66,10 @@ TEST_CASE("Bad input")
     CHECK_THROWS(mat(2, 3, '@', '@'));
     CHECK_THROWS(mat(2, 3, '#', '#'));
     CHECK_THROWS(mat(2, 3, '(', '('));
+    //wrong symbol
+    CHECK_THROWS(mat(9, 7, ' ', ' '));
+    CHECK_THROWS(mat(9, 7, '@', ' '));
+    CHECK_THROWS(mat(9, 7, '@', '\n'));
+    CHECK_THROWS(mat(9, 7, '@', '\t'));
+    CHECK_THROWS(mat(9, 7, '@', '\r'));
 }
